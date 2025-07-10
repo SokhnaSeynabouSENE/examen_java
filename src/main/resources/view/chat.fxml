@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="420" prefWidth="520" style="-fx-background-color: #F7FBFF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.ChatController">
+    <top>
+        <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #2196F3; -fx-padding: 12 0 12 18;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text=" JAVA DAFFA NEXX" />
+        </HBox>
+    </top>
+    <center>
+        <ListView fx:id="messageList" style="-fx-background-color: #FFFFFF; -fx-border-color: #E3F2FD; -fx-border-width: 1.5; -fx-background-radius: 8px; -fx-padding: 6 6 6 6;" />
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="7" style="-fx-background-color: #E3F2FD; -fx-padding: 12 14 12 14; -fx-background-radius: 0 0 8 8;">
+            <Button fx:id="emojiButton" onAction="#onEmoji" prefHeight="34.0" prefWidth="38.0" style="-fx-background-color: #E3F2FD; -fx-border-color: #90CAF9; -fx-background-radius: 8px; -fx-font-size: 18px;" text="😀" textAlignment="CENTER" />
+            <TextField fx:id="messageField" promptText="Votre message..." style="-fx-background-radius: 8px; -fx-background-color: #FFFFFF; -fx-border-color: #BBDEFB; -fx-border-radius: 8px; -fx-font-size: 13px;" HBox.hgrow="ALWAYS" />
+            <Button fx:id="sendButton" onAction="#onSend" prefHeight="34.0" prefWidth="76.0" style="-fx-background-color: #1976D2; -fx-background-radius: 8px; -fx-font-size: 13px;" text="Envoyer" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Button>
+            <Button fx:id="quitButton" onAction="#onQuit" prefHeight="34.0" prefWidth="74.0" style="-fx-background-color: #E53935; -fx-background-radius: 8px; -fx-font-size: 13px;" text="Quitter" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>

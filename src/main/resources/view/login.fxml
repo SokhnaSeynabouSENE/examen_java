@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="214.0" prefWidth="354.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="client.controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" layoutX="40" layoutY="40" prefHeight="100" prefWidth="240" spacing="15">
+            <children>
+                <HBox spacing="10">
+                    <Label prefHeight="17.0" prefWidth="93.0" text="Pseudo :">
+                  <font>
+                     <Font name="Segoe UI Black" size="12.0" />
+                  </font></Label>
+                    <TextField fx:id="pseudoField" prefHeight="25.0" prefWidth="215.0" promptText="veuillez saisir votre pseudo ici" />
+                </HBox>
+                <Button fx:id="connectButton" onAction="#onConnect" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #007ACF;" text="Connexion" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

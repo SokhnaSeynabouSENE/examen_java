@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="chatPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Ajoute tes entités ici si besoin -->
+
+        <class>server.model.Message</class>
+        <class>server.model.Membre</class>
+
+        <properties>
+            <!-- Paramètres de connexion à la base de données MySQL -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- ======================= CORRECTION CI-DESSOUS ======================= -->
+            <!-- Le caractère '&' doit être écrit "&" dans un fichier XML.      -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/nabou?serverTimezone=UTC"/>
+<property name="jakarta.persistence.jdbc.user" value="root"/>
+<property name="jakarta.persistence.jdbc.password" value=""/>
+<!-- ... autres lignes ... -->  
+            <!-- Paramètres spécifiques à Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
